@@ -1,1 +1,1 @@
-# java-sv2-daily-labs06
+A Struktúraváltás 2.0 tananyaghoz tartozó konzultációkon kiadott 6. heti feladataim.
