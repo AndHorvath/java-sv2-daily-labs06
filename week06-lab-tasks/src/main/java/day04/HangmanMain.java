@@ -12,17 +12,19 @@ public class HangmanMain {
         Scanner sc = new Scanner(System.in);
         String wordToFind = "alma";
         String wordFound = "____";
+        String guess;
         int chances = 8;
 
         do {
             System.out.println("Itt tartasz: " + wordFound);
             System.out.println("Ennyi tipped van még: " + chances);
             System.out.println("Mi a következő tipped?");
+            guess = sc.nextLine();
 
-            wordFound = updateWordFound(wordToFind, wordFound, sc.nextLine());
-            if (!wordFound.equals(wordToFind)) {
+            if (!wordToFind.contains(guess)) {
                 chances--;
             }
+            wordFound = updateWordFound(wordToFind, wordFound, guess);
         } while (!wordFound.equals(wordToFind) && chances > 0);
 
         if (wordFound.equals(wordToFind)) {
