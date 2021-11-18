@@ -20,7 +20,9 @@ public class HangmanMain {
             System.out.println("Mi a következő tipped?");
 
             wordFound = updateWordFound(wordToFind, wordFound, sc.nextLine());
-            chances -= !wordFound.equals(wordToFind) ? 1 : 0;
+            if (!wordFound.equals(wordToFind)) {
+                chances--;
+            }
         } while (!wordFound.equals(wordToFind) && chances > 0);
 
         if (wordFound.equals(wordToFind)) {
